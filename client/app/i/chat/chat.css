@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@layer components {
+    .message-wrapper {
+        @apply w-full gap-2 
+    }
+
+    .message {
+        @apply w-fit max-w-3/4 p-2 text-sm rounded-lg break-words mt-3
+    }
+
+
+
+    .sendered-message {
+        @apply  bg-sky-500 text-sm p-2 ml-auto; 
+        
+    }
+
+    .received-message {
+        @apply bg-zinc-500  mr-auto;
+    }
+}
+
+.chat::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat::-webkit-scrollbar-thumb {
+    @apply bg-gray-500 rounded-3xl;
+}

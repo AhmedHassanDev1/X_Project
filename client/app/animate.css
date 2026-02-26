@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+
+@layer components {
+  .skeleton-loading-animate {
+    --shine-color: rgba(140, 140, 140, 0.735);
+    --base-color: rgba(255, 255, 255, 0.12);
+
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+      90deg,
+      var(--base-color) 25%,
+      var(--shine-color) 50%,
+      var(--base-color) 75%
+    );
+
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.2s ease-in-out infinite;
+  }
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

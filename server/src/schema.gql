@@ -1,0 +1,61 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Author {
+  _id: String!
+  name: String!
+  image: String
+  isFollow: Boolean!
+}
+
+type Statistics {
+  replies_count: Int!
+  likes_count: Int!
+  view_count: Int!
+  reposts_count: Int!
+}
+
+type Media {
+  _id: String!
+  url: String!
+  width: Int!
+  height: Int!
+  type: String!
+  format: String!
+  thumbnail: String
+}
+
+type Post {
+  _id: String!
+  user: Author!
+  original: String
+  original_post: Post
+  text: String
+  type: String!
+  media: [Media!]
+  statistics: Statistics!
+  isLike: Boolean!
+  isBookmark: Boolean!
+  isRepost: Boolean!
+  createdAt: String!
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  endCursor: String
+}
+
+type PostConnection {
+  posts: [Post]
+  pageInfo: PageInfo!
+}
+
+type Query {
+  getPostById(id: String!): Post!
+  getHomeContent(cursor: String, limit: Int): PostConnection!
+  getUserPosts(userId: String!, cursor: String, limit: Int): PostConnection!
+  getUserReplies(userId: String!, cursor: String, limit: Int): PostConnection!
+  getUserLikePosts(userId: String!, cursor: String, limit: Int): PostConnection!
+  getUserPostsBookmarks(q: String, cursor: String, limit: Int): PostConnection!
+}

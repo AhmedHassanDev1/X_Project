@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@layer components {
+    .profile-image-container {
+        @apply  w-full aspect-[16/6] bg-zinc-800 object-cover;
+    }
+
+    .user-image-container {
+        @apply bg-zinc-800 absolute top-0 left-3 -translate-y-1/2 h-[200%] aspect-square overflow-hidden border-4 border-solid border-white dark:border-black rounded-full;
+    }
+
+    .user-image {
+        @apply absolute w-full h-full object-center object-cover;
+    }
+
+}
