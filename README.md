@@ -18,6 +18,7 @@
 
 # 🛠️ Tech Stack
 ## 💻 Client
+- Nextjs
 
 - Apollo Client (GraphQL)
 
@@ -62,3 +63,4 @@
 
 - Docker Compose
  
+
