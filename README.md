@@ -53,7 +53,14 @@
 - Redis (Cache DB)
 
 - Elasticsearch (Engine Search)
-
+## 🛠 Server Architecture
+- Auth Module (RestAPI)
+- User Module (RestAPI)
+- Notifications Module (RestAPI)
+- Interactions Module (RestAPI)
+- Chat Module (RestAPI & SocketIO)
+- Content Module (GraphQL)
+ 
 ## 🌐 Web Server
 -  NGINX
 
@@ -63,4 +70,5 @@
 
 - Docker Compose
  
+
 
